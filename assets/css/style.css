@@ -75,6 +75,12 @@ a {
   }
 }
 
+.sr-only {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 /* Slider */
 .slick-slider {
   position: relative;
