@@ -244,17 +244,22 @@ a {
 }
 
 .site-header {
+  padding: 18px 0 24px 0;
   position: relative;
   background: rgba(0, 75, 102, 0.8);
   font-family: "BPG ExtraSquare Mtavruli", sans-serif;
   z-index: 100;
 }
 .site-header .container {
-  padding: 18px 0 24px 0;
   display: flex;
 }
 .site-header .logo {
-  margin-right: 48px;
+  margin-right: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .site-header .logo {
+    margin-right: 48px;
+  }
 }
 .site-header .logo svg {
   display: block;
@@ -265,13 +270,27 @@ a {
   flex-direction: column;
 }
 .site-header__top {
-  margin-top: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: auto;
 }
+@media only screen and (min-width: 768px) {
+  .site-header__top {
+    margin-bottom: 14px;
+    flex-direction: row;
+  }
+}
 .site-header .temp {
-  display: flex;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .site-header .temp {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+  }
 }
 .site-header .temp li {
   font-size: 14px;

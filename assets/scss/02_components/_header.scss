@@ -1,16 +1,20 @@
 .site-header {
+  padding: 18px 0 24px 0;
   position: relative;
   background: $primary-transparent;
-  font-family: 'BPG ExtraSquare Mtavruli', sans-serif;
+  font-family: $font-headings-main, sans-serif;
   z-index: 100;
 
   & .container {
-    padding: 18px 0 24px 0;
     display: flex;
   }
 
   & .logo {
-    margin-right: 48px;
+    margin-right: 24px;
+
+    @media only screen and (min-width: $sm) {
+      margin-right: 48px;
+    }
 
     svg {
       display: block;
@@ -24,14 +28,26 @@
   }
 
   &__top {
-    margin-top: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: auto;
+
+    @media only screen and (min-width: $sm) {
+      margin-bottom: 14px;
+      flex-direction: row;
+    }
   }
 
   & .temp {
-    display: flex;
+    display: none;
+
+    @media only screen and (min-width: $sm) {
+      display: flex;
+      margin-top: 20px;
+      flex-direction: row;
+    }
 
     li {
       font-size: 14px;
