@@ -13,6 +13,10 @@
   color: $black;
   line-height: 1.1;
 
+  @media only screen and (max-width: 1365px) {
+    font-size: 24px;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -44,4 +48,5 @@
 
 .body {
   font-family: 'BPG Mrgvlovani';
+  font-size: 16px;
 }

@@ -1,5 +1,13 @@
 // Colours
 $primary: hsl(196, 100%, 20%);
+$primary-transparent: rgba(0, 75, 102, 0.8);
 $secondary: hsl(32, 100%, 55%);
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
+
+// Media Queries
+$xl: 1920px;
+$lg: 1366px;
+$md: 1024px;
+$sm: 768px;
+$xs: 320px;

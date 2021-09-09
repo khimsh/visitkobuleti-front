@@ -39,6 +39,11 @@
     height: 282px;
     border: 5px solid $secondary;
 
+    @media only screen and (max-width: 1365px) {
+      width: 340px;
+      height: 180px;
+    }
+
     &--1 {
       transform: translate(-100px, -46px);
     }
