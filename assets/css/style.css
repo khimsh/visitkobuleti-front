@@ -557,6 +557,7 @@ a {
     grid-column: 2/4;
     grid-row: 1/2;
     transform: translateY(-190px);
+    width: 100%;
   }
 }
 
