@@ -1,6 +1,6 @@
 .section-heading {
   margin-bottom: 25px;
-  font-family: 'BPG ExtraSquare Mtavruli', sans-serif;
+  font-family: $font-headings-main, sans-serif;
   font-size: 20px;
   color: #00769f;
 }
@@ -8,13 +8,17 @@
 .article-heading {
   margin-bottom: 55px;
   position: relative;
-  font-family: 'BPG ExtraSquare Mtavruli', sans-serif;
-  font-size: 28px;
+  font-family: $font-headings-main, sans-serif;
+  font-size: 18px;
   color: $black;
   line-height: 1.1;
 
-  @media only screen and (max-width: 1365px) {
-    font-size: 24px;
+  @media only screen and (min-width: $xs) {
+    font-size: 20px;
+  }
+
+  @media only screen and (min-width: $md) {
+    font-size: 28px;
   }
 
   &::after {
@@ -31,7 +35,7 @@
 .site-footer__heading {
   margin-bottom: 50px;
   position: relative;
-  font-family: 'BPG ExtraSquare Mtavruli', sans-serif;
+  font-family: $font-headings-main, sans-serif;
   font-size: 17px;
   color: $black;
 
@@ -47,6 +51,10 @@
 }
 
 .body {
-  font-family: 'BPG Mrgvlovani';
-  font-size: 16px;
+  font-family: $font-body, sans-serif;
+  font-size: 14px;
+
+  @media only screen and (min-width: $md) {
+    font-size: 16px;
+  }
 }

@@ -1,55 +1,99 @@
 .about {
   position: relative;
   margin-top: 54px;
-  margin-bottom: -130px;
+  // margin-bottom: -130px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 44px;
-    left: 0;
-    width: calc((100% - 1140px) / 2);
-    height: 277px;
-    background: $primary;
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 44px;
+  //   left: 0;
+  //   width: calc((100% - 1140px) / 2);
+  //   height: 277px;
+  //   background: $primary;
 
-    @media only screen and (min-width: 1400px) {
-      width: calc((100% - 1320px) / 2);
+  //   @media only screen and (min-width: 1400px) {
+  //     width: calc((100% - 1320px) / 2);
+  //   }
+  // }
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 124px;
+  //   right: 0;
+  //   width: 500px;
+  //   height: 196px;
+  //   background: $primary;
+  //   z-index: -1;
+  // }
+
+  .section-heading {
+    @media only screen and (min-width: $sm) {
+      padding-left: 30px;
     }
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 124px;
-    right: 0;
-    width: 500px;
-    height: 196px;
-    background: $primary;
-    z-index: -1;
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media only screen and (min-width: $sm) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 60px;
+    }
+  }
+
+  &__texts {
+    margin-bottom: 24px;
+
+    @media only screen and (min-width: $sm) {
+      padding-left: 30px;
+    }
   }
 }
 
 .composition {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+
+  @media only screen and (min-width: $sm) {
+    align-items: flex-end;
+    justify-content: center;
+  }
 
   &__image {
-    width: 488px;
-    height: 282px;
+    width: 60%;
+    height: auto;
     border: 5px solid $secondary;
 
-    @media only screen and (max-width: 1365px) {
-      width: 340px;
-      height: 180px;
+    @media only screen and (min-width: $sm) {
+      width: 80%;
     }
 
     &--1 {
-      transform: translate(-100px, -46px);
+      transform: translateX(-30px);
+
+      @media only screen and (min-width: $sm) {
+        transform: translateX(-80px);
+      }
+
+      @media only screen and (min-width: $md) {
+        transform: translate(-80px, -46px);
+      }
     }
 
     &--2 {
-      transform: translateY(-130px);
+      transform: translate(40px, -70px);
+
+      @media only screen and (min-width: $sm) {
+        transform: translate(0, -60px);
+      }
+
+      @media only screen and (min-width: $md) {
+        transform: translate(0, -120px);
+      }
     }
   }
 }
