@@ -1,0 +1,79 @@
+.site-footer {
+  padding: 34px 0 0 0;
+  background: #eeeeee;
+
+  &__links {
+    padding-bottom: 60px;
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    a {
+      font-family: 'BPG Mrgvlovani';
+      font-size: 12px;
+      color: $black;
+    }
+  }
+
+  .phone {
+    font-family: 'BPG Mrgvlovani';
+    font-size: 12px;
+  }
+
+  .mail {
+    font-family: 'Futura Md BT';
+    font-size: 12px;
+    color: $secondary;
+  }
+
+  &__copy {
+    padding: 20px 0 22px 0;
+    font-family: 'Segoe UI';
+    color: $white;
+    background: $primary;
+
+    a {
+      font-family: inherit;
+      color: inherit;
+    }
+
+    & .site-created-by {
+      text-align: right;
+    }
+  }
+
+  .social-media-links {
+    margin-top: 26px;
+    display: flex;
+
+    li {
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-right: 22px;
+      }
+    }
+
+    a {
+      padding: 5px;
+      display: block;
+      width: 28px;
+      height: 28px;
+      border-radius: 28px;
+      background: hsl(195, 100%, 31%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    svg {
+      display: block;
+      height: 18px;
+
+      fill: $white;
+    }
+  }
+}

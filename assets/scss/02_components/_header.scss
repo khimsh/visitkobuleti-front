@@ -1,0 +1,68 @@
+.site-header {
+  position: relative;
+  background: hsla(196, 100%, 20%, 0.8);
+  font-family: 'BPG ExtraSquare Mtavruli', sans-serif;
+  z-index: 100;
+
+  & .container {
+    padding: 18px 0 24px 0;
+    display: flex;
+  }
+
+  & .logo {
+    margin-right: 48px;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: auto;
+  }
+
+  & .temp {
+    display: flex;
+
+    li {
+      font-size: 14px;
+      color: $white;
+
+      &:nth-child(2) {
+        margin-left: 20px;
+        margin-right: 38px;
+      }
+    }
+
+    span {
+      color: $secondary;
+    }
+  }
+
+  & .langs {
+    display: flex;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+    a {
+      color: $white;
+
+      &.active {
+        opacity: 0.5;
+      }
+    }
+  }
+}

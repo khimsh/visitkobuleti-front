@@ -1,0 +1,82 @@
+.slick-dots {
+  display: flex;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &.slick-active {
+      button {
+        background: transparent;
+        border: 1px solid #00769f;
+      }
+    }
+  }
+  button {
+    color: transparent;
+    width: 15px;
+    height: 15px;
+    background: #00769f;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+.reservations {
+  .slick-dots {
+    position: absolute;
+    bottom: 66px;
+    left: 70px;
+
+    li {
+      &.slick-active {
+        button {
+          background: transparent;
+          border: 1px solid $white;
+        }
+      }
+    }
+    button {
+      background: $white;
+    }
+  }
+}
+
+.sister-cities {
+  .slick-dots {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45%;
+    justify-content: center;
+
+    li {
+      &.slick-active {
+        button {
+          background: transparent;
+          border: 1px solid $secondary;
+        }
+      }
+    }
+    button {
+      background: $secondary;
+    }
+  }
+}
+
+.blog-news {
+  .slick-dots {
+    margin-top: 64px;
+    justify-content: flex-end;
+  }
+
+  .slick-slide {
+    margin: 0 20px;
+  }
+
+  .slick-list {
+    margin: 0 -20px;
+  }
+}

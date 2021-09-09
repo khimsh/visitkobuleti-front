@@ -1,0 +1,58 @@
+.travel {
+  position: relative;
+  z-index: 100;
+
+  &__card {
+    position: relative;
+    width: 100%;
+    height: 489px;
+
+    figure {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(
+          to bottom,
+          hsla(0, 0%, 0%, 0),
+          hsla(0, 0%, 0%, 0.7),
+          hsl(0, 0%, 0%)
+        );
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    a {
+      padding: 20px;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    h3 {
+      margin-bottom: 55px;
+      position: relative;
+      font-family: 'BPG ExtraSquare Mtavruli', sans-serif;
+      font-size: 20px;
+      color: $white;
+      text-align: center;
+      z-index: 100;
+    }
+  }
+}

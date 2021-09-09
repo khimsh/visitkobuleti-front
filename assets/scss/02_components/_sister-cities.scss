@@ -1,0 +1,41 @@
+.sister-cities {
+  padding: 46px 0 130px 0;
+  background: #17263c;
+
+  h2 {
+    margin-bottom: 34px;
+    font-family: 'BPG ExtraSquare Mtavruli';
+    font-size: 48px;
+    color: hsla(0, 0%, 89%, 0.3);
+  }
+
+  .city {
+    display: flex;
+
+    figure {
+      flex-basis: 55%;
+    }
+
+    &__content {
+      flex-basis: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h3 {
+      margin-bottom: 84px;
+      font-family: 'BPG ExtraSquare Mtavruli';
+      font-size: 50px;
+      color: $secondary;
+      text-align: center;
+    }
+
+    p {
+      max-width: 400px;
+      color: $white;
+      text-align: center;
+    }
+  }
+}
