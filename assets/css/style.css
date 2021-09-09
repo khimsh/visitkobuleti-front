@@ -350,6 +350,68 @@ a {
   position: relative;
   margin-top: 54px;
 }
+@media only screen and (min-width: 1366px) {
+  .about {
+    margin-bottom: -70px;
+  }
+}
+.about::before {
+  content: "";
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: 10px;
+  height: 277px;
+  background: #00769f;
+}
+@media only screen and (min-width: 768px) {
+  .about::before {
+    width: calc((100% - 676px) / 2);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .about::before {
+    width: calc((100% - 948px) / 2);
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .about::before {
+    width: calc((100% - 1188px) / 2);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .about::before {
+    width: calc((100% - 1290px) / 2);
+  }
+}
+.about::after {
+  content: "";
+  position: absolute;
+  top: 160px;
+  right: 0;
+  width: 15px;
+  height: 130px;
+  background: #00769f;
+  z-index: -1;
+}
+@media only screen and (min-width: 768px) {
+  .about::after {
+    width: 30vw;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .about::after {
+    top: 100px;
+    height: 170px;
+    width: 34vw;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .about::after {
+    height: 190px;
+    width: 38vw;
+  }
+}
 @media only screen and (min-width: 768px) {
   .about .section-heading {
     padding-left: 30px;
