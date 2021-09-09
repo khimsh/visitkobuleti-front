@@ -575,7 +575,7 @@ a {
   grid-template-columns: 1fr;
   row-gap: 24px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 560px) {
   .travel__grid {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 24px;
@@ -908,6 +908,9 @@ a {
   color: black;
 }
 
+.main-nav {
+  margin-top: auto;
+}
 @media only screen and (max-width: 1365px) {
   .main-nav {
     position: absolute;
@@ -1030,7 +1033,7 @@ a {
 @media only screen and (min-width: 768px) {
   .sister-cities .slick-dots {
     bottom: 0;
-    width: 45%;
+    width: 50%;
   }
 }
 .sister-cities .slick-dots li.slick-active button {
