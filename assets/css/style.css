@@ -488,39 +488,105 @@ a {
 }
 
 .sister-cities {
-  padding: 46px 0 130px 0;
-  background: #17263c;
+  padding: 30px 0 70px 0;
+  background: #16253b;
+}
+@media only screen and (min-width: 320px) {
+  .sister-cities {
+    padding: 46px 0 90px 0;
+  }
 }
 .sister-cities h2 {
   margin-bottom: 34px;
   font-family: "BPG ExtraSquare Mtavruli";
-  font-size: 48px;
+  font-size: 18px;
   color: rgba(227, 227, 227, 0.3);
+  text-align: center;
+}
+@media only screen and (min-width: 320px) {
+  .sister-cities h2 {
+    font-size: 22px;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .sister-cities h2 {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .sister-cities h2 {
+    font-size: 48px;
+  }
 }
 .sister-cities .city {
   display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .sister-cities .city {
+    flex-direction: row;
+  }
 }
 .sister-cities .city figure {
-  flex-basis: 55%;
+  margin-bottom: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .sister-cities .city figure {
+    margin-bottom: 0;
+    flex-basis: 55%;
+  }
 }
 .sister-cities .city__content {
-  flex-basis: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+@media only screen and (min-width: 768px) {
+  .sister-cities .city__content {
+    flex-basis: 55%;
+  }
+}
 .sister-cities .city h3 {
-  margin-bottom: 84px;
+  margin-bottom: 14px;
   font-family: "BPG ExtraSquare Mtavruli";
-  font-size: 50px;
+  font-size: 24px;
   color: #ff941a;
   text-align: center;
 }
+@media only screen and (min-width: 320px) {
+  .sister-cities .city h3 {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .sister-cities .city h3 {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .sister-cities .city h3 {
+    font-size: 48px;
+    margin-bottom: 44px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .sister-cities .city h3 {
+    margin-bottom: 84px;
+  }
+}
 .sister-cities .city p {
   max-width: 400px;
+  width: 100%;
+  font-size: 13px;
   color: white;
   text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .sister-cities .city p {
+    font-size: 16px;
+  }
 }
 
 .site-footer {
@@ -529,6 +595,20 @@ a {
 }
 .site-footer__links {
   padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 28px;
+}
+@media only screen and (min-width: 768px) {
+  .site-footer__links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .site-footer__links {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 0;
+  }
 }
 .site-footer li:not(:last-child) {
   margin-bottom: 10px;
@@ -755,10 +835,16 @@ a {
 
 .sister-cities .slick-dots {
   position: absolute;
-  bottom: 0;
+  bottom: -40px;
   right: 0;
-  width: 45%;
+  width: 100%;
   justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+  .sister-cities .slick-dots {
+    bottom: 0;
+    width: 45%;
+  }
 }
 .sister-cities .slick-dots li.slick-active button {
   background: transparent;

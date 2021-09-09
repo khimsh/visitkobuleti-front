@@ -1,41 +1,95 @@
 .sister-cities {
-  padding: 46px 0 130px 0;
-  background: #17263c;
+  padding: 30px 0 70px 0;
+  background: hsl(216, 45%, 16%);
+
+  @media only screen and (min-width: $xs) {
+    padding: 46px 0 90px 0;
+  }
 
   h2 {
     margin-bottom: 34px;
-    font-family: 'BPG ExtraSquare Mtavruli';
-    font-size: 48px;
+    font-family: $font-headings-main;
+    font-size: 18px;
     color: hsla(0, 0%, 89%, 0.3);
+    text-align: center;
+
+    @media only screen and (min-width: $xs) {
+      font-size: 22px;
+      text-align: left;
+    }
+
+    @media only screen and (min-width: $sm) {
+      font-size: 32px;
+    }
+
+    @media only screen and (min-width: $md) {
+      font-size: 48px;
+    }
   }
 
   .city {
     display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: $sm) {
+      flex-direction: row;
+    }
 
     figure {
-      flex-basis: 55%;
+      margin-bottom: 16px;
+
+      @media only screen and (min-width: $sm) {
+        margin-bottom: 0;
+        flex-basis: 55%;
+      }
     }
 
     &__content {
-      flex-basis: 45%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
+      @media only screen and (min-width: $sm) {
+        flex-basis: 55%;
+      }
     }
 
     h3 {
-      margin-bottom: 84px;
-      font-family: 'BPG ExtraSquare Mtavruli';
-      font-size: 50px;
+      margin-bottom: 14px;
+      font-family: $font-headings-main;
+      font-size: 24px;
       color: $secondary;
       text-align: center;
+
+      @media only screen and (min-width: $xs) {
+        font-size: 22px;
+      }
+
+      @media only screen and (min-width: $sm) {
+        font-size: 32px;
+      }
+
+      @media only screen and (min-width: $md) {
+        font-size: 48px;
+        margin-bottom: 44px;
+      }
+
+      @media only screen and (min-width: $lg) {
+        margin-bottom: 84px;
+      }
     }
 
     p {
       max-width: 400px;
+      width: 100%;
+      font-size: 13px;
       color: $white;
       text-align: center;
+
+      @media only screen and (min-width: $sm) {
+        font-size: 16px;
+      }
     }
   }
 }

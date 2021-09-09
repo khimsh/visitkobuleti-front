@@ -47,10 +47,15 @@
 .sister-cities {
   .slick-dots {
     position: absolute;
-    bottom: 0;
+    bottom: -40px;
     right: 0;
-    width: 45%;
+    width: 100%;
     justify-content: center;
+
+    @media only screen and (min-width: $sm) {
+      bottom: 0;
+      width: 45%;
+    }
 
     li {
       &.slick-active {

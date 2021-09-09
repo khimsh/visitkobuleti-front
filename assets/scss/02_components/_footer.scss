@@ -4,6 +4,19 @@
 
   &__links {
     padding-bottom: 60px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+
+    @media only screen and (min-width: $sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (min-width: $md) {
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 0;
+    }
   }
 
   li {
