@@ -143,6 +143,11 @@
     margin: 34px 0 20px 0;
     border-color: $white;
 
+    &:hover {
+      color: $secondary;
+      background: $white;
+    }
+
     @media only screen and (min-width: $md) {
       margin-top: 88px;
     }

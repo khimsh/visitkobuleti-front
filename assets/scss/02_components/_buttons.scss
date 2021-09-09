@@ -11,4 +11,9 @@
 
   border: 3px solid $secondary;
   cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background: $secondary;
+  }
 }
