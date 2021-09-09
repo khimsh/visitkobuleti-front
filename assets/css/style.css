@@ -825,6 +825,10 @@ a {
   }
 }
 
+.blog-news {
+  padding: 54px 0 75px 0;
+}
+
 .site-footer {
   padding: 34px 0 0 0;
   background: #eeeeee;
