@@ -1,16 +1,32 @@
 .activities {
-  margin-bottom: -540px;
+  margin: 34px 0;
+
+  > .container {
+    @media only screen and (min-width: $md) {
+      display: grid;
+      grid-template-columns: 1fr 100px 1fr;
+      margin-bottom: -120px;
+    }
+  }
 }
 
 .weather {
-  padding: 35px 0 120px 70px;
+  margin-top: 20px;
+  padding: 40px 20px;
   background: #00769f;
-  transform: translateY(-585px);
+
+  @media only screen and (min-width: $md) {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    max-height: 520px;
+    margin-top: 82px;
+    padding: 85px 120px 60px 70px;
+  }
 
   h3 {
     margin-bottom: 75px;
     position: relative;
-    font-family: 'BPG ExtraSquare Mtavruli';
+    font-family: $font-headings-main;
     font-size: 26px;
     color: $white;
 
@@ -26,23 +42,42 @@
   }
 
   p {
-    max-width: 377px;
-    margin-bottom: 85px;
-    font-size: 15px;
+    font-size: 14px;
     color: $white;
+
+    @media only screen and (min-width: $md) {
+      font-size: 15px;
+    }
+  }
+
+  a.btn {
+    margin-top: 34px;
+
+    @media only screen and (min-width: $md) {
+      margin-top: 88px;
+    }
   }
 }
 
 .reservations {
-  transform: translateY(-190px);
   position: relative;
   z-index: 1;
+
+  @media only screen and (min-width: $md) {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    transform: translateY(-190px);
+  }
 }
 
 .reservation {
   position: relative;
-  height: 766px !important;
-  padding: 288px 70px 136px 70px;
+  padding: 40px 20px;
+
+  @media only screen and (min-width: $md) {
+    height: 730px !important;
+    padding: 288px 70px 136px 70px;
+  }
 
   figure {
     position: absolute;
@@ -75,7 +110,7 @@
   h3 {
     margin-bottom: 75px;
     position: relative;
-    font-family: 'BPG ExtraSquare Mtavruli';
+    font-family: $font-headings-main;
     font-size: 26px;
     color: $white;
 
@@ -91,13 +126,21 @@
   }
 
   p {
-    font-size: 15px;
+    font-size: 14px;
     color: $white;
+
+    @media only screen and (min-width: $md) {
+      font-size: 15px;
+    }
   }
 
   a.btn {
-    margin-top: 88px;
+    margin: 34px 0 20px 0;
     border-color: $white;
+
+    @media only screen and (min-width: $md) {
+      margin-top: 88px;
+    }
   }
 }
 

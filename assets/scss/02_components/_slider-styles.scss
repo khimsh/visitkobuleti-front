@@ -27,8 +27,21 @@
 .reservations {
   .slick-dots {
     position: absolute;
-    bottom: 66px;
-    left: 70px;
+
+    bottom: 20px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    place-content: center;
+
+    @media only screen and (min-width: $md) {
+      left: 70px;
+      place-content: start;
+    }
+
+    @media only screen and (min-width: $lg) {
+      bottom: 40px;
+    }
 
     li {
       &.slick-active {

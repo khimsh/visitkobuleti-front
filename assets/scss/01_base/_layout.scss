@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media only screen and (min-width: $sm) {
+    max-width: 726px;
+    padding: 0 30px;
+  }
+
+  @media only screen and (min-width: $md) {
+    max-width: 978px;
+  }
+
+  @media only screen and (min-width: $lg) {
+    max-width: 1218px;
+  }
+
+  @media only screen and (min-width: $xl) {
+    max-width: 1320px;
+  }
+}
