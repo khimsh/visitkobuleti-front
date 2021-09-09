@@ -1,6 +1,10 @@
 .activities {
   margin: 34px 0;
 
+  @media only screen and (min-width: $md) {
+    margin-bottom: 80px;
+  }
+
   > .container {
     @media only screen and (min-width: $md) {
       display: grid;
@@ -18,7 +22,7 @@
   @media only screen and (min-width: $md) {
     grid-column: 1/3;
     grid-row: 1/2;
-    max-height: 520px;
+    max-height: 560px;
     margin-top: 82px;
     padding: 85px 120px 60px 70px;
   }
@@ -142,8 +146,4 @@
       margin-top: 88px;
     }
   }
-}
-
-.blog-news {
-  padding: 54px 0 75px 0;
 }

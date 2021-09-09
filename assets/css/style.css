@@ -488,6 +488,11 @@ a {
   margin: 34px 0;
 }
 @media only screen and (min-width: 1024px) {
+  .activities {
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (min-width: 1024px) {
   .activities > .container {
     display: grid;
     grid-template-columns: 1fr 100px 1fr;
@@ -504,7 +509,7 @@ a {
   .weather {
     grid-column: 1/3;
     grid-row: 1/2;
-    max-height: 520px;
+    max-height: 560px;
     margin-top: 82px;
     padding: 85px 120px 60px 70px;
   }
@@ -622,10 +627,6 @@ a {
   .reservation a.btn {
     margin-top: 88px;
   }
-}
-
-.blog-news {
-  padding: 54px 0 75px 0;
 }
 
 .travel {
