@@ -25,14 +25,19 @@
     }
 
     a {
-      font-family: 'BPG Mrgvlovani';
+      font-family: $font-body;
       font-size: 12px;
       color: $black;
+      transition: all 0.2s linear;
+
+      &:hover {
+        color: $secondary;
+      }
     }
   }
 
   .phone {
-    font-family: 'BPG Mrgvlovani';
+    font-family: $font-body;
     font-size: 12px;
   }
 
@@ -64,6 +69,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      transition: all 0.2s linear;
+
+      &:hover {
+        background: hsl(195, 100%, 19%);
+      }
     }
 
     svg {
