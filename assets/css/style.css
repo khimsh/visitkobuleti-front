@@ -290,6 +290,7 @@ a {
 .body {
   font-family: "BPG Mrgvlovani", sans-serif;
   font-size: 14px;
+  margin: 14px 0;
 }
 @media only screen and (min-width: 1024px) {
   .body {
@@ -467,7 +468,7 @@ a {
 }
 @media only screen and (min-width: 768px) {
   .about::after {
-    width: 30vw;
+    width: calc((100% - 676px) / 2);
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -492,7 +493,7 @@ a {
   display: grid;
   grid-template-columns: 1fr;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .about__content {
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
@@ -501,7 +502,7 @@ a {
 .about__texts {
   margin-bottom: 24px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .about__texts {
     padding-left: 30px;
   }
@@ -518,6 +519,12 @@ a {
     justify-content: center;
   }
 }
+@media only screen and (min-width: 1024px) {
+  .composition {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+}
 .composition__image {
   width: 240px;
   height: 160px;
@@ -526,6 +533,7 @@ a {
 @media only screen and (min-width: 768px) {
   .composition__image {
     width: 80%;
+    height: 220px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -554,6 +562,7 @@ a {
 }
 .composition__image--2 {
   transform: translate(30px, -70px);
+  z-index: 2;
 }
 @media only screen and (min-width: 768px) {
   .composition__image--2 {
@@ -563,6 +572,32 @@ a {
 @media only screen and (min-width: 1024px) {
   .composition__image--2 {
     transform: translate(0, -120px);
+  }
+}
+.composition__image--3 {
+  transform: translate(-25px, -110px);
+}
+@media only screen and (min-width: 768px) {
+  .composition__image--3 {
+    transform: translate(-80px, -110px);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .composition__image--3 {
+    transform: translate(-80px, -180px);
+  }
+}
+.composition__image--4 {
+  transform: translate(30px, -160px);
+}
+@media only screen and (min-width: 768px) {
+  .composition__image--4 {
+    transform: translate(0, -160px);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .composition__image--4 {
+    transform: translate(0, -240px);
   }
 }
 
