@@ -291,7 +291,12 @@ a {
 @media only screen and (min-width: 1366px) {
   .page-heading {
     margin-bottom: 75px;
-    font-size: 74px;
+    font-size: 54px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .page-heading {
+    font-size: 75px;
   }
 }
 
@@ -346,6 +351,9 @@ a {
   background: rgba(0, 75, 102, 0.8);
   font-family: "BPG ExtraSquare Mtavruli", sans-serif;
   z-index: 100;
+}
+.site-header--inner {
+  background: #004b66;
 }
 .site-header .container {
   display: flex;
@@ -424,6 +432,11 @@ a {
   .banner {
     height: 380px;
   }
+}
+.banner--reservations {
+  margin-bottom: 0;
+  height: 287px;
+  transform: translateY(0);
 }
 .banner img {
   width: 100%;
