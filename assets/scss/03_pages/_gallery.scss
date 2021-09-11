@@ -142,7 +142,11 @@
 }
 
 .photo-gallery {
-  margin: 75px 0;
+  margin: 35px 0;
+
+  @media only screen and (min-width: $md) {
+    margin: 75px 0;
+  }
 
   &__grid {
     display: grid;
@@ -160,12 +164,22 @@
   }
 
   &__navigation {
+    margin-bottom: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 
+    @media only screen and (min-width: 540px) {
+      flex-direction: row;
+    }
+
     h2 {
-      margin-right: 30px;
+      margin-bottom: 14px;
       color: $secondary;
+
+      @media only screen and (min-width: 540px) {
+        margin-right: 30px;
+      }
     }
 
     a {
@@ -174,7 +188,7 @@
 
     h2,
     a {
-      margin-bottom: 20px;
+      display: block;
       font-family: $font-body, sans-serif;
       font-size: 24px;
       text-align: center;
@@ -191,11 +205,24 @@
 }
 
 .album {
+  &__link {
+    &:hover {
+      .album__title {
+        color: $secondary;
+      }
+
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
   &__cover {
     margin-bottom: 18px;
     position: relative;
     width: 100%;
     height: 160px;
+    overflow: hidden;
 
     @media only screen and (min-width: $lg) {
       height: 220px;
@@ -208,6 +235,7 @@
     img {
       width: 100%;
       height: 100%;
+      transition: all 0.2s linear;
     }
   }
 
@@ -215,5 +243,6 @@
     font-family: $font-headings-main, sans-serif;
     font-size: 16px;
     color: #343434;
+    transition: all 0.2s linear;
   }
 }

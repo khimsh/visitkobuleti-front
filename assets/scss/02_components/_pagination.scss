@@ -1,7 +1,11 @@
 .pagination {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
+
+  @media only screen and (min-width: $md) {
+    margin-top: 100px;
+  }
 
   ul {
     display: flex;
@@ -10,33 +14,38 @@
 
   li {
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 20px;
     }
   }
 
   &__prev,
   &__next {
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $primary;
+    a {
+      width: 22px;
+      height: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $primary;
+    }
 
-    a,
     svg {
       display: block;
     }
   }
 
   &__prev {
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
+    a {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
   }
 
   &__next {
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
+    a {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
   }
 
   &__number {
@@ -46,6 +55,7 @@
 
     a {
       color: inherit;
+      padding: 10px;
     }
   }
 }

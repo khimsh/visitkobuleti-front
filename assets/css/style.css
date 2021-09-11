@@ -1322,18 +1322,23 @@ a {
 }
 
 .pagination {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
+}
+@media only screen and (min-width: 1024px) {
+  .pagination {
+    margin-top: 100px;
+  }
 }
 .pagination ul {
   display: flex;
   align-items: center;
 }
 .pagination li:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 20px;
 }
-.pagination__prev, .pagination__next {
+.pagination__prev a, .pagination__next a {
   width: 22px;
   height: 22px;
   display: flex;
@@ -1341,16 +1346,14 @@ a {
   align-items: center;
   background: #004b66;
 }
-.pagination__prev a,
-.pagination__prev svg, .pagination__next a,
-.pagination__next svg {
+.pagination__prev svg, .pagination__next svg {
   display: block;
 }
-.pagination__prev {
+.pagination__prev a {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
-.pagination__next {
+.pagination__next a {
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
@@ -1361,6 +1364,7 @@ a {
 }
 .pagination__number a {
   color: inherit;
+  padding: 10px;
 }
 
 .gallery {
@@ -1507,7 +1511,12 @@ a {
 }
 
 .photo-gallery {
-  margin: 75px 0;
+  margin: 35px 0;
+}
+@media only screen and (min-width: 1024px) {
+  .photo-gallery {
+    margin: 75px 0;
+  }
 }
 .photo-gallery__grid {
   display: grid;
@@ -1526,19 +1535,31 @@ a {
   }
 }
 .photo-gallery__navigation {
+  margin-bottom: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
+@media only screen and (min-width: 540px) {
+  .photo-gallery__navigation {
+    flex-direction: row;
+  }
+}
 .photo-gallery__navigation h2 {
-  margin-right: 30px;
+  margin-bottom: 14px;
   color: #ff941a;
+}
+@media only screen and (min-width: 540px) {
+  .photo-gallery__navigation h2 {
+    margin-right: 30px;
+  }
 }
 .photo-gallery__navigation a {
   color: #e6e6e6;
 }
 .photo-gallery__navigation h2,
 .photo-gallery__navigation a {
-  margin-bottom: 20px;
+  display: block;
   font-family: "BPG Mrgvlovani", sans-serif;
   font-size: 24px;
   text-align: center;
@@ -1556,11 +1577,18 @@ a {
   }
 }
 
+.album__link:hover .album__title {
+  color: #ff941a;
+}
+.album__link:hover img {
+  transform: scale(1.05);
+}
 .album__cover {
   margin-bottom: 18px;
   position: relative;
   width: 100%;
   height: 160px;
+  overflow: hidden;
 }
 @media only screen and (min-width: 1366px) {
   .album__cover {
@@ -1575,11 +1603,13 @@ a {
 .album__cover img {
   width: 100%;
   height: 100%;
+  transition: all 0.2s linear;
 }
 .album__title {
   font-family: "BPG ExtraSquare Mtavruli", sans-serif;
   font-size: 16px;
   color: #343434;
+  transition: all 0.2s linear;
 }
 
 /*# sourceMappingURL=style.css.map */
