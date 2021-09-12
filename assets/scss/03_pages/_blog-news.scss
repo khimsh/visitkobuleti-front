@@ -20,3 +20,14 @@
     }
   }
 }
+
+.blog {
+  &-title {
+    margin-bottom: 1.75em;
+  }
+
+  &-timestamp {
+    margin-bottom: 1.875em;
+    display: block;
+  }
+}

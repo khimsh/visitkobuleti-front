@@ -188,6 +188,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: #fbfbfb;
+}
+
 ul {
   list-style-type: none;
 }
@@ -200,6 +204,16 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.zoom-on-hover {
+  overflow: hidden;
+}
+.zoom-on-hover:hover img {
+  transform: scale(1.1);
+}
+.zoom-on-hover img {
+  transition: all 0.2s ease-in;
 }
 
 .container {
@@ -227,6 +241,167 @@ a {
   .container {
     max-width: 1366px;
   }
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-grid {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contact-form-grid {
+  padding: 1.75em 2em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 1024px) {
+  .contact-form-grid {
+    padding: 0 5.25em;
+  }
+}
+.contact-form-grid h2 {
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 480px) {
+  .form-control-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-control-wrapper .form-control {
+    flex-basis: 48%;
+  }
+}
+
+.form-control {
+  margin-bottom: 1em;
+}
+
+.blog__grid {
+  margin-bottom: 34px;
+}
+@media only screen and (min-width: 1024px) {
+  .blog__grid {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.blog__grid > * {
+  flex-basis: 50%;
+}
+.blog p:first-child {
+  margin-top: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .blog__body {
+    margin-right: 44px;
+  }
+}
+.blog__footer {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media only screen and (min-width: 768px) {
+  .blog__footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.other-news {
+  margin-top: 54px;
+}
+.other-news__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+@media only screen and (min-width: 520px) {
+  .other-news__grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .other-news__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .other-news__grid {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 0;
+  }
+}
+.other-news h3 {
+  margin-bottom: 30px;
+}
+
+.travel-browse__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+}
+@media only screen and (min-width: 520px) {
+  .travel-browse__grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .travel-browse__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .travel-browse__grid {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 26px;
+    row-gap: 40px;
+  }
+}
+
+.travel-browse__form {
+  padding: 20px;
+}
+.travel-browse__form form {
+  max-width: 940px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+@media only screen and (min-width: 480px) {
+  .travel-browse__form form {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .travel-browse__form form {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.actions ul {
+  display: flex;
+}
+.actions ul li:first-child {
+  margin-right: 8px;
+}
+
+.hotel-card__row {
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .sr-only {
@@ -331,6 +506,127 @@ a {
   }
 }
 
+.main-nav a {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+.main-nav a:active {
+  color: #ff941a;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea,
+select,
+option {
+  font-family: "BPG Mrgvlovani", sans-serif;
+  font-size: 0.875rem;
+  color: #313131;
+}
+
+button {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+}
+
+.contact-address h2 {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #343434;
+}
+.contact-address p {
+  font-family: "BPG Mrgvlovani", sans-serif;
+  font-size: 0.875rem;
+  color: #313131;
+}
+
+.contact-form h2 {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: #343434;
+}
+
+.contact-form-grid button {
+  font-size: 0.75rem;
+  color: white;
+}
+
+.hotel-card__heading {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+}
+.hotel-card__price {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1rem;
+  color: #ff941a;
+}
+.hotel-card__guests {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1rem;
+  color: #aeaeae;
+}
+
+.blog-title {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 400;
+  color: #004b66;
+}
+.blog-timestamp {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1.25rem;
+  color: #ff941a;
+}
+
+.other-news h3 {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #004b66;
+}
+
+.back-link__text {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1.125rem;
+  color: #343434;
+}
+
+.actions button {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1.125rem;
+  color: #fefeff;
+  text-transform: capitalize;
+}
+
+.travel-browse__form button {
+  color: white;
+}
+
+.banner__title {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  line-height: 1.4;
+}
+@media only screen and (min-width: 768px) {
+  .banner__title {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .banner__title {
+    font-size: 3.125rem;
+  }
+}
+.banner__title--inner {
+  text-align: center;
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -346,6 +642,93 @@ a {
 }
 .btn:hover {
   background: #ff941a;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+}
+.back-link__icon {
+  margin-right: 50px;
+  width: 50px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff941a;
+}
+.back-link__icon svg {
+  display: block;
+}
+
+.actions button {
+  padding: 0 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  background: #1877f2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.actions button:hover {
+  background: #105cbe;
+}
+.actions button svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  transform: translateY(-2px);
+}
+
+.travel-browse__form button {
+  padding: 0;
+  height: 40px;
+  background: #ff941a;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+  width: 100%;
+  height: 40px;
+  padding: 0 0.5em;
+  border: 1px solid #dbdbdb;
+  background: white;
+}
+@media only screen and (min-width: 1366px) {
+  input[type=text],
+input[type=email],
+input[type=tel] {
+    height: 67px;
+    padding: 0 1.75em;
+  }
+}
+
+select {
+  height: 40px;
+  padding: 0 0.5em;
+  border: 1px solid #dbdbdb;
+  background: white;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.5em;
+  border: 1px solid #dbdbdb;
+  background: white;
+}
+@media only screen and (min-width: 1366px) {
+  textarea {
+    height: 158px;
+    padding: 1.75em;
+  }
 }
 
 .site-header {
@@ -447,16 +830,6 @@ a {
 }
 .banner .container {
   transform: translateY(-80px);
-}
-.banner__title {
-  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
-  font-size: 50px;
-  color: white;
-}
-@media only screen and (max-width: 1365px) {
-  .banner__title {
-    font-size: 38px;
-  }
 }
 
 .about {
@@ -995,6 +1368,19 @@ a {
   padding: 54px 0 75px 0;
 }
 
+.travel-browse__form {
+  margin: 20px 0 30px 0;
+  background: #e3e3e3;
+}
+
+.contact-form-grid button {
+  width: 124px;
+  height: 40px;
+  background: #ff941a;
+  border: none;
+  cursor: pointer;
+}
+
 .site-footer {
   padding: 34px 0 0 0;
   background: #eeeeee;
@@ -1109,6 +1495,7 @@ a {
   box-shadow: 0 15px 4px rgba(0, 0, 0, 0.16);
   margin-left: 1px;
   margin-bottom: 15px;
+  background: white;
 }
 .card figure {
   width: 100%;
@@ -1149,6 +1536,26 @@ a {
   color: black;
 }
 
+.hotel-card__photo {
+  margin-bottom: 16px;
+  height: 140px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1024px) {
+  .hotel-card__photo {
+    height: 180px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .hotel-card__photo {
+    height: 245px;
+  }
+}
+.hotel-card__photo img {
+  width: 100%;
+  height: 100%;
+}
+
 .main-nav {
   margin-top: auto;
 }
@@ -1177,31 +1584,33 @@ a {
   }
 }
 .main-nav li:not(:last-child) {
-  margin-right: 28px;
+  margin-bottom: 0.25em;
 }
-@media only screen and (max-width: 1365px) {
+@media only screen and (min-width: 1366px) {
   .main-nav li:not(:last-child) {
-    margin-right: 0;
+    margin-bottom: 0;
+    margin-right: 1.75em;
   }
 }
 .main-nav a {
+  padding: 0.5em 0;
+  display: block;
   position: relative;
-  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
-  font-size: 16px;
-  color: white;
 }
-.main-nav a::before {
-  content: "";
-  position: absolute;
-  bottom: -24px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  transition: all 0.2s linear;
-  background: transparent;
-}
-.main-nav a:hover::before {
-  background: #ff941a;
+@media only screen and (min-width: 1366px) {
+  .main-nav a::before {
+    content: "";
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    transition: all 0.2s linear;
+    background: transparent;
+  }
+  .main-nav a:hover::before {
+    background: #ff941a;
+  }
 }
 @media only screen and (min-width: 1366px) {
   .main-nav a.active {
@@ -1217,27 +1626,22 @@ a {
     background: #ff941a;
   }
 }
-@media only screen and (max-width: 1365px) {
-  .main-nav a {
-    display: block;
-    padding: 10px 0;
-  }
-}
 
 .openNav {
   margin-left: auto;
+  padding: 0;
   cursor: pointer;
   width: 34px;
   height: 34px;
-  display: none;
+  display: flex;
   place-content: center;
   border: none;
   background: transparent;
   transform: translateX(5px);
 }
-@media only screen and (max-width: 1365px) {
+@media only screen and (min-width: 1366px) {
   .openNav {
-    display: flex;
+    display: none;
   }
 }
 .openNav svg {
@@ -1693,6 +2097,14 @@ a {
   }
 }
 
+.blog-title {
+  margin-bottom: 1.75em;
+}
+.blog-timestamp {
+  margin-bottom: 1.875em;
+  display: block;
+}
+
 .tourist-centers {
   padding: 54px 0 75px 0;
 }
@@ -1732,6 +2144,43 @@ a {
   font-family: "BPG ExtraSquare Mtavruli", sans-serif;
   font-size: 16px;
   color: #004d68;
+}
+
+.contact-address {
+  padding: 1.75em 2em;
+  background: #d4f4ff;
+}
+@media only screen and (min-width: 1024px) {
+  .contact-address {
+    padding: 4.625em 5.25em;
+  }
+}
+.contact-address li:not(:last-child) {
+  margin-bottom: 1.75em;
+}
+.contact-address h2 {
+  margin-bottom: 1em;
+}
+.contact-address p {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.contact-address p:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+.contact-address span:not(:last-child) {
+  margin-bottom: 0.25em;
+}
+.contact-address a {
+  color: inherit;
+  transition: all 0.2s linear;
+}
+.contact-address a:hover {
+  color: #ff941a;
+}
+.contact-form {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

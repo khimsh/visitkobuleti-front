@@ -1,0 +1,49 @@
+.contact {
+  &-address {
+    padding: 1.75em 2em;
+    background: #d4f4ff;
+
+    @media only screen and (min-width: $md) {
+      padding: 4.625em 5.25em;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 1.75em;
+      }
+    }
+
+    h2 {
+      margin-bottom: 1em;
+    }
+
+    p {
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+
+      &:not(:last-child) {
+        margin-bottom: 0.5em;
+      }
+    }
+
+    span {
+      &:not(:last-child) {
+        margin-bottom: 0.25em;
+      }
+    }
+
+    a {
+      color: inherit;
+      transition: all 0.2s linear;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  &-form {
+    width: 100%;
+  }
+}

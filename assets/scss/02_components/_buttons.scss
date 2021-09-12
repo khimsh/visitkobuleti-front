@@ -17,3 +17,59 @@
     background: $secondary;
   }
 }
+
+.back-link {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-right: 50px;
+    width: 50px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $secondary;
+
+    svg {
+      display: block;
+    }
+  }
+}
+
+.actions {
+  button {
+    padding: 0 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    background: #1877f2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:hover {
+      background: #105cbe;
+    }
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.travel-browse__form {
+  button {
+    padding: 0;
+    height: 40px;
+    background: $secondary;
+    border: none;
+    cursor: pointer;
+  }
+}
