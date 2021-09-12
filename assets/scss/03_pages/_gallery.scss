@@ -246,3 +246,53 @@
     transition: all 0.2s linear;
   }
 }
+
+.single-photo {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    &::after {
+      background: hsla(196, 100%, 20%, 0.6);
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: all 0.2s linear;
+  }
+}
+
+.other-albums {
+  position: relative;
+  margin-top: 50px;
+  &__slider {
+    width: 90%;
+  }
+
+  h3 {
+    margin-bottom: 24px;
+    font-family: $font-headings-main;
+    font-size: 18px;
+    color: #343434;
+
+    @media only screen and (min-width: $md) {
+      margin-bottom: 34px;
+      font-size: 24px;
+    }
+  }
+
+  .album {
+    h3 {
+      font-size: 17px;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+  }
+}

@@ -98,3 +98,20 @@
     margin: 0 -20px;
   }
 }
+
+.other-albums {
+  &__slider {
+    .slick-slide {
+      margin: 0 20px;
+    }
+
+    .slick-list {
+      margin: 0 -20px;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    right: 0;
+  }
+}

@@ -277,6 +277,9 @@ a {
   color: #e4e4e4;
   text-align: center;
 }
+.page-heading--left {
+  text-align: left;
+}
 @media only screen and (min-width: 768px) {
   .page-heading {
     margin-bottom: 35px;
@@ -290,7 +293,7 @@ a {
 }
 @media only screen and (min-width: 1366px) {
   .page-heading {
-    margin-bottom: 75px;
+    margin-bottom: 40px;
     font-size: 54px;
   }
 }
@@ -1321,6 +1324,17 @@ a {
   margin: 0 -20px;
 }
 
+.other-albums__slider .slick-slide {
+  margin: 0 20px;
+}
+.other-albums__slider .slick-list {
+  margin: 0 -20px;
+}
+.other-albums .slick-arrow {
+  position: absolute;
+  right: 0;
+}
+
 .pagination {
   margin-top: 50px;
   display: flex;
@@ -1610,6 +1624,114 @@ a {
   font-size: 16px;
   color: #343434;
   transition: all 0.2s linear;
+}
+
+.single-photo {
+  position: relative;
+  cursor: pointer;
+}
+.single-photo:hover::after {
+  background: rgba(0, 75, 102, 0.6);
+}
+.single-photo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: all 0.2s linear;
+}
+
+.other-albums {
+  position: relative;
+  margin-top: 50px;
+}
+.other-albums__slider {
+  width: 90%;
+}
+.other-albums h3 {
+  margin-bottom: 24px;
+  font-family: "BPG ExtraSquare Mtavruli";
+  font-size: 18px;
+  color: #343434;
+}
+@media only screen and (min-width: 1024px) {
+  .other-albums h3 {
+    margin-bottom: 34px;
+    font-size: 24px;
+  }
+}
+.other-albums .album h3 {
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.blog-news__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+@media only screen and (min-width: 520px) {
+  .blog-news__grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .blog-news__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .blog-news__grid {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+  }
+}
+
+.tourist-centers {
+  padding: 54px 0 75px 0;
+}
+.tourist-centers__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+@media only screen and (min-width: 520px) {
+  .tourist-centers__grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .tourist-centers__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.tourist-center__photo {
+  margin-bottom: 14px;
+}
+.tourist-center__location {
+  display: flex;
+  align-items: flex-start;
+}
+.tourist-center__icon {
+  display: block;
+  margin-right: 16px;
+}
+.tourist-center__icon svg {
+  display: block;
+}
+.tourist-center__address {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 16px;
+  color: #004d68;
 }
 
 /*# sourceMappingURL=style.css.map */
