@@ -1,4 +1,4 @@
-.about {
+.about-us {
   position: relative;
   margin-top: 54px;
 
@@ -80,6 +80,18 @@
     @media only screen and (min-width: $md) {
       padding-left: 30px;
     }
+  }
+}
+
+.about-us-negative-margin {
+  margin-bottom: -5em;
+
+  @media only screen and (min-width: $md) {
+    margin-bottom: 1em;
+  }
+
+  @media only screen and (min-width: $lg) {
+    margin-bottom: -8em;
   }
 }
 

@@ -1,6 +1,5 @@
 .gallery {
   position: relative;
-  margin: 34px 0 64px 0;
 
   @media only screen and (min-width: $lg) {
     margin-bottom: 120px;
@@ -142,27 +141,6 @@
 }
 
 .photo-gallery {
-  margin: 35px 0;
-
-  @media only screen and (min-width: $md) {
-    margin: 75px 0;
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 34px;
-
-    @media only screen and (min-width: 540px) {
-      grid-template-columns: 1fr 1fr;
-      column-gap: 20px;
-    }
-
-    @media only screen and (min-width: $sm) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
   &__navigation {
     margin-bottom: 20px;
     display: flex;
