@@ -229,7 +229,7 @@ button {
 .actions {
   button {
     font-family: $font-headings-main, sans-serif;
-    font-size: 1.125rem;
+    font-size: 0.9rem;
     color: #fefeff;
     text-transform: capitalize;
   }
@@ -259,6 +259,14 @@ button {
     &--inner {
       text-align: center;
     }
+  }
+}
+
+.reservation-inner {
+  &-title {
+    font-family: $font-headings-main, sans-serif;
+    font-size: 2rem;
+    color: $black;
   }
 }
 
@@ -301,4 +309,11 @@ button {
       color: inherit;
     }
   }
+}
+
+.video-card-title {
+  font-family: $font-headings-main, sans-serif;
+  font-size: 1.25rem;
+  color: #343434;
+  font-weight: 400;
 }

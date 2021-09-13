@@ -4,3 +4,11 @@
   // IE6, IE7
   clip: rect(1px, 1px, 1px, 1px);
 }
+
+.mb-md {
+  margin-bottom: 2.125em;
+
+  @media only screen and (min-width: $md) {
+    margin-bottom: 3.25em;
+  }
+}

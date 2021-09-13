@@ -6,13 +6,50 @@
   z-index: 1;
 
   @media only screen and (max-width: 1365px) {
-    height: 380px;
+    height: 280px;
   }
 
   &--reservations {
     margin-bottom: 0;
-    height: 287px;
+    height: 240px;
     transform: translateY(0);
+
+    @media only screen and (min-width: $md) {
+      height: 287px;
+    }
+  }
+
+  &--shadow {
+    figure {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 60%;
+        background: linear-gradient(
+          to bottom,
+          hsla(0, 0%, 0%, 0),
+          hsla(0, 0%, 0%, 0.7),
+          hsl(0, 0%, 0%)
+        );
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__title {
+    z-index: 100;
   }
 
   img {

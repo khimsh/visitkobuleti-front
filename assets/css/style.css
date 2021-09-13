@@ -125,6 +125,22 @@
   font-size: 1.2rem;
   text-align: center;
 }
+.lightbox-modal .video-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lightbox-modal video {
+  max-width: 80vw;
+  height: auto;
+}
+@media only screen and (min-width: 1024px) {
+  .lightbox-modal video {
+    max-width: 60vw;
+  }
+}
 .lightbox-modal button {
   position: absolute;
   top: 20px;
@@ -463,10 +479,37 @@ a {
   }
 }
 
+.reservation-inner {
+  margin-bottom: -5em;
+}
+@media only screen and (min-width: 1024px) {
+  .reservation-inner .composition {
+    margin-top: 3em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .reservation-inner {
+    margin-bottom: -3em;
+  }
+}
+
+.banner--reservations .container {
+  transform: translateY(180px) !important;
+}
+
 .sr-only {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+.mb-md {
+  margin-bottom: 2.125em;
+}
+@media only screen and (min-width: 1024px) {
+  .mb-md {
+    margin-bottom: 3.25em;
+  }
 }
 
 .site-header {
@@ -674,7 +717,7 @@ button {
 
 .actions button {
   font-family: "BPG ExtraSquare Mtavruli", sans-serif;
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   color: #fefeff;
   text-transform: capitalize;
 }
@@ -701,6 +744,12 @@ button {
 }
 .banner__title--inner {
   text-align: center;
+}
+
+.reservation-inner-title {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 2rem;
+  color: black;
 }
 
 .site-footer li a {
@@ -736,6 +785,13 @@ button {
   color: inherit;
 }
 
+.video-card-title {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1.25rem;
+  color: #343434;
+  font-weight: 400;
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -768,17 +824,18 @@ button {
 }
 .back-link__icon svg {
   display: block;
+  fill: white;
 }
 
 .actions button {
-  padding: 0 14px;
+  padding: 0 0.75em;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 35px;
+  height: 1.8em;
   background: #1877f2;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s linear;
 }
@@ -787,8 +844,8 @@ button {
 }
 .actions button svg {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   margin-right: 4px;
   transform: translateY(-2px);
 }
@@ -911,13 +968,40 @@ textarea {
 }
 @media only screen and (max-width: 1365px) {
   .banner {
-    height: 380px;
+    height: 280px;
   }
 }
 .banner--reservations {
   margin-bottom: 0;
-  height: 287px;
+  height: 240px;
   transform: translateY(0);
+}
+@media only screen and (min-width: 1024px) {
+  .banner--reservations {
+    height: 287px;
+  }
+}
+.banner--shadow figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.banner--shadow figure::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7), black);
+}
+.banner .container {
+  position: relative;
+}
+.banner__title {
+  z-index: 100;
 }
 .banner img {
   width: 100%;
@@ -1578,6 +1662,32 @@ textarea {
   }
 }
 
+.video-card {
+  cursor: pointer;
+}
+.video-card-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #004b66;
+  pointer-events: none;
+}
+.video-card-icon svg {
+  display: block;
+  fill: white;
+}
+
+.video-wrapper {
+  position: relative;
+  margin-bottom: 1em;
+}
+
 .main-nav {
   margin-top: auto;
 }
@@ -1757,8 +1867,60 @@ textarea {
   margin: 0 -20px;
 }
 .other-albums .slick-arrow {
+  width: 50px;
+  height: 60px;
   position: absolute;
+  bottom: -45px;
+  border: none;
+  background: #ff941a;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1024px) {
+  .other-albums .slick-arrow {
+    top: 32%;
+    bottom: initial;
+  }
+}
+.other-albums .slick-arrow svg {
+  fill: white;
+}
+.other-albums .slick-prev {
+  left: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .other-albums .slick-prev {
+    left: initial;
+    right: calc((100% - 978px - 30px) / 2);
+    transform: translateY(-60px);
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .other-albums .slick-prev {
+    right: calc((100% - 1218px - 60px) / 2);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .other-albums .slick-prev {
+    right: calc((100% - 1366px - 60px) / 2);
+  }
+}
+.other-albums .slick-next {
   right: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .other-albums .slick-next {
+    right: calc((100% - 978px - 30px) / 2);
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .other-albums .slick-next {
+    right: calc((100% - 1218px - 60px) / 2);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .other-albums .slick-next {
+    right: calc((100% - 1366px - 60px) / 2);
+  }
 }
 
 .pagination {
@@ -1960,14 +2122,16 @@ textarea {
     flex-direction: row;
   }
 }
-.photo-gallery__navigation h2 {
+.photo-gallery__navigation li:not(:last-child) {
   margin-bottom: 14px;
-  color: #ff941a;
 }
 @media only screen and (min-width: 540px) {
-  .photo-gallery__navigation h2 {
+  .photo-gallery__navigation li:not(:last-child) {
     margin-right: 30px;
   }
+}
+.photo-gallery__navigation h2 {
+  color: #ff941a;
 }
 .photo-gallery__navigation a {
   color: #e6e6e6;
@@ -2034,6 +2198,12 @@ textarea {
 .single-photo:hover::after {
   background: rgba(0, 75, 102, 0.6);
 }
+.single-photo:hover .single-photo-icon {
+  background: #ff941a;
+}
+.single-photo:hover .single-photo-icon svg {
+  fill: white;
+}
 .single-photo::after {
   content: "";
   position: absolute;
@@ -2043,14 +2213,40 @@ textarea {
   height: 100%;
   background: transparent;
   transition: all 0.2s linear;
+  pointer-events: none;
+}
+.single-photo-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 100%;
+  pointer-events: none;
+  z-index: 10;
+  transition: all 0.2s linear;
+}
+.single-photo-icon svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+  fill: transparent;
+  transition: all 0.2s linear;
 }
 
 .other-albums {
   position: relative;
   margin-top: 50px;
 }
-.other-albums__slider {
-  width: 90%;
+@media only screen and (min-width: 1024px) {
+  .other-albums__slider {
+    width: 90%;
+  }
 }
 .other-albums h3 {
   margin-bottom: 24px;

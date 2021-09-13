@@ -36,21 +36,40 @@ $(document).ready(function () {
     ],
   });
 
+  const previousArrow = `
+    <button class="slick-arrow slick-prev">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="11" height="28" viewBox="0 0 11 28">
+        <title>angle-left</title>
+        <path d="M9.797 8.5c0 0.125-0.063 0.266-0.156 0.359l-6.141 6.141 6.141 6.141c0.094 0.094 0.156 0.234 0.156 0.359s-0.063 0.266-0.156 0.359l-0.781 0.781c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-7.281-7.281c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l7.281-7.281c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l0.781 0.781c0.094 0.094 0.156 0.219 0.156 0.359z"></path>
+      </svg>
+    </button>
+  `;
+
+  const nextArrow = `
+    <button class="slick-arrow slick-next">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="9" height="28" viewBox="0 0 9 28">
+        <title>angle-right</title>
+        <path d="M9.297 15c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-0.781-0.781c-0.094-0.094-0.156-0.219-0.156-0.359 0-0.125 0.063-0.266 0.156-0.359l6.141-6.141-6.141-6.141c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l7.281 7.281c0.094 0.094 0.156 0.234 0.156 0.359z"></path>
+      </svg>
+    </button>
+  `;
+
   $('.other-albums__slider').slick({
     arrows: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    prevArrow: previousArrow,
+    nextArrow: nextArrow,
     responsive: [
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          dots: true,
         },
       },
       {
-        breakpoint: 992,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -163,3 +182,53 @@ function openModal(e) {
   // Append modal to body
   document.body.appendChild(createModal(e.target.src, e.target.alt));
 }
+
+// Video Lightbox
+const videoLightboxes = document.querySelectorAll('.video-lightbox');
+
+[...videoLightboxes].forEach((videoLightbox) => {
+  videoLightbox.addEventListener('click', (e) => {
+    if (e.target.tagName.toLowerCase() !== 'video') return;
+
+    const videoSource = e.target.childNodes[1].outerHTML;
+
+    console.log(videoSource);
+
+    const modalElement = document.createElement('div');
+    modalElement.className = 'lightbox-modal';
+
+    const videoWrapper = document.createElement('div');
+    videoWrapper.className = 'video-wrapper';
+
+    const video = document.createElement('video');
+    video.setAttribute('controls', true);
+
+    video.innerHTML = videoSource;
+    videoWrapper.appendChild(video);
+    modalElement.appendChild(videoWrapper);
+
+    // Button element to close modal on click
+    const closeBtn = document.createElement('button');
+    closeBtn.innerHTML = `
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 8 8"
+        >
+          <path
+            d="M16.783,9.64l-2.5,2.5-2.5-2.5-1.5,1.5,2.5,2.5-2.5,2.5,1.5,1.5,2.5-2.5,2.5,2.5,1.5-1.5-2.5-2.5,2.5-2.5Z"
+            transform="translate(-10.283 -9.64)"
+          />
+        </svg>
+      `;
+
+    modalElement.appendChild(closeBtn);
+
+    closeBtn.addEventListener('click', () => {
+      document.body.removeChild(modalElement);
+    });
+
+    document.body.appendChild(modalElement);
+  });
+});

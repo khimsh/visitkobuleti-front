@@ -250,3 +250,23 @@
     }
   }
 }
+
+.reservation-inner {
+  .composition {
+    @media only screen and (min-width: $md) {
+      margin-top: 3em;
+    }
+  }
+
+  margin-bottom: -5em;
+
+  @media only screen and (min-width: $md) {
+    margin-bottom: -3em;
+  }
+}
+
+.banner--reservations {
+  .container {
+    transform: translateY(180px) !important;
+  }
+}
