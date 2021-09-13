@@ -1,3 +1,28 @@
+.site-header {
+  font-family: $font-headings-main, sans-serif;
+
+  & .temp {
+    li {
+      font-size: 14px;
+      color: $white;
+    }
+
+    span {
+      color: $secondary;
+    }
+  }
+
+  & .langs {
+    a {
+      color: $white;
+
+      &.active {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
 .section-heading {
   margin-bottom: 25px;
   font-family: $font-headings-main, sans-serif;
@@ -233,6 +258,47 @@ button {
 
     &--inner {
       text-align: center;
+    }
+  }
+}
+
+.site-footer {
+  li {
+    a {
+      font-family: $font-body;
+      font-size: 12px;
+      color: $black;
+      transition: all 0.2s linear;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  .phone {
+    font-family: $font-body;
+    font-size: 12px;
+  }
+
+  .mail {
+    font-family: 'Futura Md BT';
+    font-size: 12px;
+    color: $secondary;
+  }
+
+  &__copy {
+    font-family: 'Segoe UI', sans-serif;
+    color: $white;
+    text-align: center;
+
+    @media only screen and (min-width: $sm) {
+      text-align: initial;
+    }
+
+    & a {
+      font-family: inherit;
+      color: inherit;
     }
   }
 }

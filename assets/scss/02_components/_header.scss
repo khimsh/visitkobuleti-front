@@ -2,7 +2,6 @@
   padding: 18px 0 24px 0;
   position: relative;
   background: $primary-transparent;
-  font-family: $font-headings-main, sans-serif;
   z-index: 100;
 
   &--inner {
@@ -54,17 +53,10 @@
     }
 
     li {
-      font-size: 14px;
-      color: $white;
-
       &:nth-child(2) {
         margin-left: 20px;
         margin-right: 38px;
       }
-    }
-
-    span {
-      color: $secondary;
     }
   }
 
@@ -74,14 +66,6 @@
     li {
       &:not(:last-child) {
         margin-right: 15px;
-      }
-    }
-
-    a {
-      color: $white;
-
-      &.active {
-        opacity: 0.5;
       }
     }
   }
