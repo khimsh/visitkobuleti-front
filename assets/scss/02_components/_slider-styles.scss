@@ -177,17 +177,8 @@
     left: 0;
 
     @media only screen and (min-width: $md) {
-      left: initial;
-      right: calc((100% - 978px - 30px) / 2);
-      transform: translateY(-60px);
-    }
-
-    @media only screen and (min-width: $lg) {
-      right: calc((100% - 1218px - 60px) / 2);
-    }
-
-    @media only screen and (min-width: $xl) {
-      right: calc((100% - 1366px - 60px) / 2);
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
@@ -195,15 +186,8 @@
     right: 0;
 
     @media only screen and (min-width: $md) {
-      right: calc((100% - 978px - 30px) / 2);
-    }
-
-    @media only screen and (min-width: $lg) {
-      right: calc((100% - 1218px - 60px) / 2);
-    }
-
-    @media only screen and (min-width: $xl) {
-      right: calc((100% - 1366px - 60px) / 2);
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

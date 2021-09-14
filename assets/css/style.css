@@ -497,9 +497,20 @@ a {
   transform: translateY(180px) !important;
 }
 
+@media only screen and (min-width: 768px) {
+  .apartment-info {
+    display: flex;
+    align-items: center;
+  }
+}
 .apartment-info .row {
   display: flex;
   align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .apartment-info .row {
+    flex-grow: 1;
+  }
 }
 
 .site-header {
@@ -749,11 +760,26 @@ button {
   font-weight: 400;
   color: black;
 }
+@media only screen and (min-width: 1024px) {
+  .apartment-info h2 {
+    font-size: 1.75rem;
+  }
+}
 .apartment-info .guest-count {
   color: #aeaeae;
 }
+@media only screen and (min-width: 1024px) {
+  .apartment-info .guest-count {
+    font-size: 1.75rem;
+  }
+}
 .apartment-info .price {
   color: #ff941a;
+}
+@media only screen and (min-width: 1024px) {
+  .apartment-info .price {
+    font-size: 1.75rem;
+  }
 }
 
 .apartment-heading {
@@ -762,6 +788,21 @@ button {
   font-weight: 400;
   color: #dedede;
   text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .apartment-heading {
+    font-size: 2.125rem;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .apartment-heading {
+    font-size: 3.375rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .apartment-heading {
+    font-size: 4.375rem;
+  }
 }
 
 .apartment-description .body {
@@ -936,6 +977,16 @@ textarea {
   height: 240px;
   overflow: hidden;
 }
+@media only screen and (min-width: 1024px) {
+  .apartment-slider-big figure {
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .apartment-slider-big figure {
+    height: 420px;
+  }
+}
 .apartment-slider-big figure img {
   width: 100%;
   height: 100%;
@@ -946,17 +997,49 @@ textarea {
   padding-bottom: 64px;
   margin-bottom: 20px;
 }
+@media only screen and (min-width: 1024px) {
+  .apartment-slider-small {
+    padding: 0 60px;
+    margin-top: -70px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .apartment-slider-small {
+    margin-top: -80px;
+  }
+}
 .apartment-slider-small figure {
   height: 140px;
   overflow: hidden;
+}
+@media only screen and (min-width: 1024px) {
+  .apartment-slider-small figure {
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .apartment-slider-small figure {
+    height: 220px;
+  }
 }
 .apartment-slider-small figure img {
   width: 100%;
   height: 100%;
 }
 
+@media only screen and (min-width: 1024px) {
+  .apartment-info {
+    padding: 0 60px;
+  }
+}
 .apartment-info h2 {
   margin-bottom: 0.75em;
+}
+@media only screen and (min-width: 768px) {
+  .apartment-info h2 {
+    margin-bottom: 0;
+    margin-right: 1em;
+  }
 }
 .apartment-info .line {
   margin: 0 1em;
@@ -970,10 +1053,26 @@ textarea {
   padding-bottom: 1.75em;
   border-bottom: 1px solid #c7c7c7;
 }
+@media only screen and (min-width: 1024px) {
+  .apartment-description {
+    margin: 0 60px;
+    margin-bottom: 2.75em;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .apartment-description {
+    margin-bottom: 3.75em;
+  }
+}
 .apartment-description .body {
   margin: 0;
 }
 
+@media only screen and (min-width: 1024px) {
+  .apartment-details {
+    padding: 0 60px;
+  }
+}
 .apartment-details ul {
   padding-left: 14px;
   list-style: disc;
@@ -987,6 +1086,11 @@ textarea {
 
 .apartment-heading {
   margin-bottom: 14px;
+}
+@media only screen and (min-width: 1366px) {
+  .apartment-heading {
+    margin-bottom: 28px;
+  }
 }
 
 .site-header {
@@ -2027,19 +2131,8 @@ textarea {
 }
 @media only screen and (min-width: 1024px) {
   .apartment-slider-small .slick-prev {
-    left: initial;
-    right: calc((100% - 978px - 30px) / 2);
-    transform: translateY(-60px);
-  }
-}
-@media only screen and (min-width: 1366px) {
-  .apartment-slider-small .slick-prev {
-    right: calc((100% - 1218px - 60px) / 2);
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .apartment-slider-small .slick-prev {
-    right: calc((100% - 1366px - 60px) / 2);
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 .apartment-slider-small .slick-next {
@@ -2047,17 +2140,8 @@ textarea {
 }
 @media only screen and (min-width: 1024px) {
   .apartment-slider-small .slick-next {
-    right: calc((100% - 978px - 30px) / 2);
-  }
-}
-@media only screen and (min-width: 1366px) {
-  .apartment-slider-small .slick-next {
-    right: calc((100% - 1218px - 60px) / 2);
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .apartment-slider-small .slick-next {
-    right: calc((100% - 1366px - 60px) / 2);
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 

@@ -272,8 +272,17 @@
 }
 
 .apartment-info {
+  @media only screen and (min-width: $sm) {
+    display: flex;
+    align-items: center;
+  }
+
   .row {
     display: flex;
     align-items: center;
+
+    @media only screen and (min-width: $sm) {
+      flex-grow: 1;
+    }
   }
 }
