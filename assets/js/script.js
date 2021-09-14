@@ -85,6 +85,38 @@ $(document).ready(function () {
     ],
   });
 
+  $('.apartment-slider-small').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.apartment-slider-big',
+    prevArrow: previousArrow,
+    nextArrow: nextArrow,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+  $('.apartment-slider-big').slick({
+    arrows: false,
+    fade: true,
+    draggable: true,
+    asNavFor: '.apartment-slider-small',
+  });
+
   $('.reservations').slick({
     arrows: false,
     dots: true,

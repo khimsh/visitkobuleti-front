@@ -270,6 +270,43 @@ button {
   }
 }
 
+.apartment-info {
+  font-family: $font-headings-main, sans-serif;
+
+  h2 {
+    font-weight: 400;
+    color: $black;
+  }
+
+  .guest-count {
+    color: #aeaeae;
+  }
+
+  .price {
+    color: $secondary;
+  }
+}
+
+.apartment-heading {
+  font-family: $font-headings-main, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #dedede;
+  text-align: center;
+}
+
+.apartment-description {
+  .body {
+    line-height: 1.5;
+  }
+}
+
+.apartment-details {
+  li {
+    font-family: $font-headings-main, sans-serif;
+  }
+}
+
 .site-footer {
   li {
     a {

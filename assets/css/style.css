@@ -497,19 +497,9 @@ a {
   transform: translateY(180px) !important;
 }
 
-.sr-only {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-.mb-md {
-  margin-bottom: 2.125em;
-}
-@media only screen and (min-width: 1024px) {
-  .mb-md {
-    margin-bottom: 3.25em;
-  }
+.apartment-info .row {
+  display: flex;
+  align-items: center;
 }
 
 .site-header {
@@ -752,6 +742,36 @@ button {
   color: black;
 }
 
+.apartment-info {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+}
+.apartment-info h2 {
+  font-weight: 400;
+  color: black;
+}
+.apartment-info .guest-count {
+  color: #aeaeae;
+}
+.apartment-info .price {
+  color: #ff941a;
+}
+
+.apartment-heading {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #dedede;
+  text-align: center;
+}
+
+.apartment-description .body {
+  line-height: 1.5;
+}
+
+.apartment-details li {
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+}
+
 .site-footer li a {
   font-family: "BPG Mrgvlovani";
   font-size: 12px;
@@ -790,6 +810,21 @@ button {
   font-size: 1.25rem;
   color: #343434;
   font-weight: 400;
+}
+
+.sr-only {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.mb-md {
+  margin-bottom: 2.125em;
+}
+@media only screen and (min-width: 1024px) {
+  .mb-md {
+    margin-bottom: 3.25em;
+  }
 }
 
 .btn {
@@ -895,6 +930,63 @@ textarea {
     height: 158px;
     padding: 1.75em;
   }
+}
+
+.apartment-slider-big figure {
+  height: 240px;
+  overflow: hidden;
+}
+.apartment-slider-big figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.apartment-slider-small {
+  margin-top: -70px;
+  padding-bottom: 64px;
+  margin-bottom: 20px;
+}
+.apartment-slider-small figure {
+  height: 140px;
+  overflow: hidden;
+}
+.apartment-slider-small figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.apartment-info h2 {
+  margin-bottom: 0.75em;
+}
+.apartment-info .line {
+  margin: 0 1em;
+  flex-grow: 1;
+  height: 1px;
+  background: #ff941a;
+}
+
+.apartment-description {
+  margin-bottom: 2.75em;
+  padding-bottom: 1.75em;
+  border-bottom: 1px solid #c7c7c7;
+}
+.apartment-description .body {
+  margin: 0;
+}
+
+.apartment-details ul {
+  padding-left: 14px;
+  list-style: disc;
+}
+.apartment-details li {
+  line-height: 1.5;
+}
+.apartment-details li:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.apartment-heading {
+  margin-bottom: 14px;
 }
 
 .site-header {
@@ -1801,6 +1893,17 @@ textarea {
   cursor: pointer;
 }
 
+.slick-arrow {
+  width: 50px;
+  height: 60px;
+  border: none;
+  background: #ff941a;
+  cursor: pointer;
+}
+.slick-arrow svg {
+  fill: white;
+}
+
 .reservations .slick-dots {
   position: absolute;
   bottom: 20px;
@@ -1867,22 +1970,14 @@ textarea {
   margin: 0 -20px;
 }
 .other-albums .slick-arrow {
-  width: 50px;
-  height: 60px;
   position: absolute;
   bottom: -45px;
-  border: none;
-  background: #ff941a;
-  cursor: pointer;
 }
 @media only screen and (min-width: 1024px) {
   .other-albums .slick-arrow {
     top: 32%;
     bottom: initial;
   }
-}
-.other-albums .slick-arrow svg {
-  fill: white;
 }
 .other-albums .slick-prev {
   left: 0;
@@ -1919,6 +2014,49 @@ textarea {
 }
 @media only screen and (min-width: 1440px) {
   .other-albums .slick-next {
+    right: calc((100% - 1366px - 60px) / 2);
+  }
+}
+
+.apartment-slider-small .slick-arrow {
+  position: absolute;
+  bottom: 0;
+}
+.apartment-slider-small .slick-prev {
+  left: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .apartment-slider-small .slick-prev {
+    left: initial;
+    right: calc((100% - 978px - 30px) / 2);
+    transform: translateY(-60px);
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .apartment-slider-small .slick-prev {
+    right: calc((100% - 1218px - 60px) / 2);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .apartment-slider-small .slick-prev {
+    right: calc((100% - 1366px - 60px) / 2);
+  }
+}
+.apartment-slider-small .slick-next {
+  right: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .apartment-slider-small .slick-next {
+    right: calc((100% - 978px - 30px) / 2);
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .apartment-slider-small .slick-next {
+    right: calc((100% - 1218px - 60px) / 2);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .apartment-slider-small .slick-next {
     right: calc((100% - 1366px - 60px) / 2);
   }
 }

@@ -270,3 +270,10 @@
     transform: translateY(180px) !important;
   }
 }
+
+.apartment-info {
+  .row {
+    display: flex;
+    align-items: center;
+  }
+}

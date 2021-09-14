@@ -1,0 +1,70 @@
+.apartment-slider-big {
+  figure {
+    height: 240px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.apartment-slider-small {
+  margin-top: -70px;
+  padding-bottom: 64px;
+  margin-bottom: 20px;
+
+  figure {
+    height: 140px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.apartment-info {
+  h2 {
+    margin-bottom: 0.75em;
+  }
+
+  .line {
+    margin: 0 1em;
+    flex-grow: 1;
+    height: 1px;
+    background: $secondary;
+  }
+}
+
+.apartment-description {
+  margin-bottom: 2.75em;
+  padding-bottom: 1.75em;
+
+  border-bottom: 1px solid #c7c7c7;
+
+  .body {
+    margin: 0;
+  }
+}
+
+.apartment-details {
+  ul {
+    padding-left: 14px;
+    list-style: disc;
+  }
+
+  li {
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+.apartment-heading {
+  margin-bottom: 14px;
+}
