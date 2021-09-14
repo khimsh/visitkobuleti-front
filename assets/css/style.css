@@ -1154,6 +1154,13 @@ textarea {
 .site-header .langs li:not(:last-child) {
   margin-right: 15px;
 }
+.site-header .langs a {
+  transition: all 0.2s linear;
+}
+.site-header .langs a:hover {
+  opacity: 1;
+  color: #ff941a;
+}
 
 .banner {
   margin-bottom: -125px;
@@ -1905,7 +1912,7 @@ textarea {
 @media only screen and (max-width: 1365px) {
   .main-nav {
     position: absolute;
-    top: 124px;
+    top: 123px;
     left: 0;
     width: 100%;
     height: 0;
