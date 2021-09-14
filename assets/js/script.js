@@ -264,3 +264,20 @@ const videoLightboxes = document.querySelectorAll('.video-lightbox');
     document.body.appendChild(modalElement);
   });
 });
+
+// Google Maps
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  const kobuleti = { lat: 41.85237616773533, lng: 41.78411452300837 };
+  // The map, centered at kobuleti
+  const map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 11,
+    center: kobuleti,
+  });
+  // The marker, positioned at kobuleti
+  const marker = new google.maps.Marker({
+    position: kobuleti,
+    map: map,
+  });
+}
