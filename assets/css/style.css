@@ -1411,6 +1411,10 @@ textarea {
   }
 }
 
+.reservation-inner .composition__image {
+  border: none;
+}
+
 .activities {
   margin: 34px 0;
 }
