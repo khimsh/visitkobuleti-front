@@ -9,13 +9,20 @@
     height: 280px;
   }
 
-  &--reservations {
+  &--reservations,
+  &--travel {
     margin-bottom: 0;
     height: 240px;
     transform: translateY(0);
 
     @media only screen and (min-width: $md) {
       height: 287px;
+    }
+  }
+
+  &--travel {
+    .container {
+      transform: translateY(-130px) !important;
     }
   }
 

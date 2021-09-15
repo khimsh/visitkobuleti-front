@@ -134,6 +134,14 @@
       justify-content: space-between;
       align-items: center;
     }
+
+    .actions {
+      margin-bottom: 1em;
+
+      @media only screen and (min-width: $sm) {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -267,7 +275,7 @@
 
 .banner--reservations {
   .container {
-    transform: translateY(180px) !important;
+    transform: translateY(160px) !important;
   }
 }
 
