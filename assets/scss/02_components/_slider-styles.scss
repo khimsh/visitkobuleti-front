@@ -114,17 +114,22 @@
 .other-albums {
   &__slider {
     .slick-slide {
-      margin: 0 20px;
+      @media only screen and (min-width: 580px) {
+        margin: 0 20px;
+      }
     }
 
     .slick-list {
-      margin: 0 -20px;
+      @media only screen and (min-width: 580px) {
+        margin: 0 -20px;
+      }
     }
   }
 
   .slick-arrow {
     position: absolute;
     bottom: -45px;
+    z-index: 1000;
 
     @media only screen and (min-width: $md) {
       top: 32%;
