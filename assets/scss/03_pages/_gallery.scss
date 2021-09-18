@@ -50,6 +50,45 @@
     }
   }
 
+  &--inner {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+    }
+
+    &::before {
+      top: 165px;
+      left: 0;
+      width: 30px;
+      height: 60vh;
+      background: $secondary;
+      opacity: 0.15;
+
+      @media only screen and (min-width: 580px) {
+        width: 6vw;
+      }
+
+      @media only screen and (min-width: $lg) {
+        height: 73vh;
+      }
+    }
+
+    &::after {
+      top: calc(65vh + 50px);
+      right: 0;
+      width: 60%;
+      height: 80px;
+      background: hsla(195, 100%, 31%, 0.15);
+      z-index: -1;
+
+      @media only screen and (min-width: $lg) {
+        top: calc(73vh + 85px);
+      }
+    }
+  }
+
   &__links {
     display: grid;
     grid-template-columns: 1fr;
@@ -229,7 +268,17 @@
 
 .single-photo {
   position: relative;
+  height: 160px;
+  width: 100%;
   cursor: pointer;
+
+  @media only screen and (min-width: $lg) {
+    height: 220px;
+  }
+
+  @media only screen and (min-width: $xl) {
+    height: 294px;
+  }
 
   &:hover {
     &::after {
@@ -242,6 +291,11 @@
         fill: $white;
       }
     }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
   }
 
   &::after {
