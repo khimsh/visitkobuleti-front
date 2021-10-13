@@ -102,16 +102,16 @@
 }
 
 .blog {
-  &__grid {
-    margin-bottom: 34px;
-
-    @media only screen and (min-width: $md) {
-      display: flex;
-      justify-content: space-between;
+  .float-right {
+    @media only screen and (min-width: $sm) {
+      float: right;
+      margin-left: 16px;
+      margin-bottom: 16px;
     }
 
-    & > * {
-      flex-basis: 50%;
+    @media only screen and (min-width: $lg) {
+      margin-left: 24px;
+      margin-bottom: 24px;
     }
   }
 
