@@ -13,7 +13,7 @@
     overflow: hidden;
 
     &.active {
-      height: 260px;
+      height: 290px;
     }
   }
 
@@ -32,7 +32,7 @@
 
       @media only screen and (min-width: $lg) {
         margin-bottom: 0;
-        margin-right: 1.75em;
+        margin-right: 1.5em;
       }
     }
   }
