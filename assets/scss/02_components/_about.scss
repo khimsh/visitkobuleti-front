@@ -96,85 +96,32 @@
 }
 
 .composition {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media only screen and (min-width: $sm) {
-    align-items: flex-end;
-    justify-content: center;
-  }
-
-  @media only screen and (min-width: $md) {
-    align-items: flex-end;
-    justify-content: flex-start;
-  }
+  position: relative;
 
   &__image {
-    width: 240px;
-    height: 160px;
+    position: absolute;
+    width: 380px;
+    height: 240px;
     border: 5px solid $secondary;
 
-    @media only screen and (min-width: $sm) {
-      width: 80%;
-      height: 220px;
-    }
-
-    @media only screen and (min-width: $md) {
-      height: 240px;
-    }
-
-    @media only screen and (min-width: $lg) {
-      width: 488px;
-      height: 282px;
-    }
-
-    &--1 {
-      transform: translateX(-25px);
-
-      @media only screen and (min-width: $sm) {
-        transform: translateX(-80px);
-      }
+    &:nth-child(odd) {
+      left: calc(50% - 20px);
+      transform: translateX(-50%);
+      z-index: 10;
 
       @media only screen and (min-width: $md) {
-        transform: translate(-80px, -46px);
+        left: -20px;
+        transform: translateX(0);
       }
     }
 
-    &--2 {
-      transform: translate(30px, -70px);
-      z-index: 2;
-
-      @media only screen and (min-width: $sm) {
-        transform: translate(0, -60px);
-      }
+    &:nth-child(even) {
+      left: calc(50% + 20px);
+      transform: translateX(-50%);
 
       @media only screen and (min-width: $md) {
-        transform: translate(0, -120px);
-      }
-    }
-
-    &--3 {
-      transform: translate(-25px, -110px);
-
-      @media only screen and (min-width: $sm) {
-        transform: translate(-80px, -110px);
-      }
-
-      @media only screen and (min-width: $md) {
-        transform: translate(-80px, -180px);
-      }
-    }
-
-    &--4 {
-      transform: translate(30px, -160px);
-
-      @media only screen and (min-width: $sm) {
-        transform: translate(0, -160px);
-      }
-
-      @media only screen and (min-width: $md) {
-        transform: translate(0, -240px);
+        left: 20px;
+        transform: translateX(0);
       }
     }
   }

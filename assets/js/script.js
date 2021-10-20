@@ -280,3 +280,19 @@ function initMap() {
     map: map,
   });
 }
+
+// Image Composition
+if (document.querySelector('.composition')) {
+  const images = document.querySelectorAll('.composition__image');
+  let composition = document.querySelector('.composition');
+  let compositionHeight = 0;
+  let offset = 0;
+
+  for (let i = 0; i < images.length; i++) {
+    images[i].style.top = i * 200 + 'px';
+    offset = (images[i].offsetHeight - 200) * images.length;
+    compositionHeight = compositionHeight + images[i].offsetHeight;
+  }
+
+  composition.style.height = compositionHeight + 80 - offset + 'px';
+}
